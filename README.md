@@ -10,7 +10,7 @@ A ideia é:
 
 _"Criar uma aplicação sobre Música utilizando uma api-rest, com intuito de promover o aprendizado utilizando o framework Django"_
 
-Este repositório tem foco, na criação de uma aplicação&api sobre Música que iria conter o padrão CRUD.
+Este repositório tem foco, na criação de uma aplicação&api relacionada a Música, onde a mesma iria conter o padrão CRUD.
 
 --------------------------------------------------------------------------------------
 
