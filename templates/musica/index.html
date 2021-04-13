@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main>
+    <div class="col s12 m6 l10 center">
+        <h2 class="text-theme truncate" >
+            {{nome_pagina}}
+        </h2>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                {% for music in list_musicas %}
+                    <div class="col s6">
+                        <div class="card horizontal z-depth-4" style="height:200px;">
+                            <div class="card-image">
+                                <img src="{{music.imagem}}" width="200px" height="200px">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>{{music.nome|truncatechars:30}}</p>
+                                    <p>{{music.cantor}}</p>
+                                    <p>{{music.album|truncatechars:33}}</p>
+                                    <p>{{music.compositor}}</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="{{music.link}}" target="_blank">This is a link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %} 
+            </div>
+        </div>    
+    </div>
+</main>
+
+{% endblock content %}
