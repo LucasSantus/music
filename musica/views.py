@@ -3,29 +3,21 @@ import requests
 import json
 
 def index(request):
-
-    buscar_dados()
-
     try:
-        api_request = requests.get("http://127.0.0.1:8000/api/music/?format=json")
-        list_musica = json.loads(api_request.text)
+    
+        if request.POST:
+            pesquisa = request.POST.get("pesquisa", None)
+            api_request = requests.get("http://127.0.0.1:8000/api/list/?search="+pesquisa)
+            list_musicas = json.loads(api_request.text)
+        
+        else:
+            api_request = requests.get("http://127.0.0.1:8000/api/music/?format=json")
+            list_musicas = json.loads(api_request.text)
+
     except:
-        list_musica = "Não Possui Músicas"
+        list_musicas = None
 
     context = {
-        "list_musicas": list_musica,
+        "list_musicas": list_musicas,
     }
-
     return render(request, "musica/index.html", context)
-
-def buscar_dados():
-    request = requests.get("http://127.0.0.1:8000/api/music/?format=json")
-    todos = json.loads(request.text)
-    print("\n\n\n\n\n\n\n")
-    print(todos)
-    print("\n")
-    print(todos[0]['nome'])
-    print("\n\n\n\n\n\n\n")
-
-if __name__ == '__main__':
-    buscar_dados()
