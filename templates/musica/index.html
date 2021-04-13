@@ -4,9 +4,7 @@
 
 <main>
     <div class="col s12 m6 l10 center">
-        <h2 class="text-theme truncate" >
-            {{nome_pagina}}
-        </h2>
+        <h3 class="text-theme truncate">Músicas</h3>
     </div>
     
     <div class="container">
@@ -18,7 +16,7 @@
                             <div class="card-image">
                                 <img src="{{music.imagem}}" width="200px" height="200px">
                             </div>
-                            <div class="card-stacked">
+                            <div class="card-stacked container">
                                 <div class="card-content">
                                     <p>{{music.nome|truncatechars:30}}</p>
                                     <p>{{music.cantor}}</p>
@@ -26,7 +24,7 @@
                                     <p>{{music.compositor}}</p>
                                 </div>
                                 <div class="card-action">
-                                    <a href="{{music.link}}" target="_blank">This is a link</a>
+                                    <a href="{{music.link}}" target="_blank">LINK</a>
                                 </div>
                             </div>
                         </div>

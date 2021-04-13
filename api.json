@@ -27,7 +27,7 @@
         "data_lancamento": "2020-11-11",
         "album": "Vamps",
         "link": "https://www.youtube.com/watch?v=Els_GCWuJVk",
-        "imagem": "http://127.0.0.1:8000/media/images/just-my-type.jpg"
+        "imagem": "http://127.0.0.1:8000/media/images/just-my-type_B4tubQ8.jpg"
     },
     {
         "id": 4,
@@ -148,5 +148,15 @@
         "album": "Stories",
         "link": "https://www.youtube.com/watch?v=UtF6Jej8yb4",
         "imagem": "http://127.0.0.1:8000/media/images/The_Nights.jpg"
+    },
+    {
+        "id": 16,
+        "nome": "ILUSÃO \"CRACOLÂNDIA\"",
+        "cantor": "Alok",
+        "compositor": "Alok",
+        "data_lancamento": "2020-11-13",
+        "album": "Ilusão (Cracolândia)",
+        "link": "https://www.youtube.com/watch?v=5LqeD-m7Iho",
+        "imagem": "http://127.0.0.1:8000/media/images/ilusao_4630dwq.jpeg"
     }
 ]
