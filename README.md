@@ -8,9 +8,9 @@ Se você quiser dar uma olhada em todas as telas do aplicativo, elas estão [aqu
 
 A ideia é:
 
-_"Criar uma aplicação  onde a mesma tenha um design simples e belo, com intuito de promover o aprendizado utilizando o framework Django"_
+_"Criar uma aplicação de Música utilizando uma api-rest, com intuito de promover o aprendizado utilizando o framework Django"_
 
-Este repositório tem foco, na criação de uma aplicação de Controle de Visitantes de um condomínio, interligado a um banco de dados provido pelo próprio Framework Django facilitando dessa forma a manipulação de seus dados.
+Este repositório tem foco, na criação de uma aplicação&api sobre Música que iria conter o padrão CRUD, interligado a um banco de dados provido pelo próprio Framework Django facilitando dessa forma a manipulação de seus dados.
 
 --------------------------------------------------------------------------------------
 
@@ -37,9 +37,9 @@ Dentro da pasta onde o projeto irá ficar armazenado, abra o terminal.
 ```
 $ git init
 
-$ git clone git@github.com:LucasSantus/controle-visitantes.git
+$ git clone git@github.com:LucasSantus/music.git
 
-$ cd controle-visitantes
+$ cd music
 ```
 
 **Preparando Ambiente Virtual**
@@ -59,9 +59,7 @@ $ pip install -r requirements.txt
 **Preparando o Projeto**
 
 ```
-$ python manage.py makemigrations cadastro
-
-$ python manage.py makemigrations administracao
+$ python manage.py makemigrations musica
 
 $ python manage.py migrate
 
@@ -91,7 +89,7 @@ http://127.0.0.1:8000/admin/
 - **Lucas Santos:** [GitHub](https://github.com/LucasSantus)
 - **Yara Silvestre:** [GitHub](https://github.com/YaraSilvst)
  
-Siga-me no github!
+Siga-nos no github!
 
 Obrigado por me visitar e boa codificação!
 
