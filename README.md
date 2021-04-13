@@ -1,4 +1,4 @@
-## Controle de Visitantes
+## Music
 
 Se você quiser dar uma olhada em todas as telas do aplicativo, elas estão [aqui] (link). Não disponiveis imagens!
 
@@ -8,9 +8,9 @@ Se você quiser dar uma olhada em todas as telas do aplicativo, elas estão [aqu
 
 A ideia é:
 
-_"Criar uma aplicação de Música utilizando uma api-rest, com intuito de promover o aprendizado utilizando o framework Django"_
+_"Criar uma aplicação sobre Música utilizando uma api-rest, com intuito de promover o aprendizado utilizando o framework Django"_
 
-Este repositório tem foco, na criação de uma aplicação&api sobre Música que iria conter o padrão CRUD, interligado a um banco de dados provido pelo próprio Framework Django facilitando dessa forma a manipulação de seus dados.
+Este repositório tem foco, na criação de uma aplicação&api sobre Música que iria conter o padrão CRUD.
 
 --------------------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ $ git clone git@github.com:LucasSantus/music.git
 $ cd music
 ```
 
-**Preparando Ambiente Virtual**
+**Preparando o Ambiente Virtual**
 
 ```
 $ sudo apt-get install python3-venv
@@ -97,4 +97,4 @@ Obrigado por me visitar e boa codificação!
 
 ### License
 
-Este projeto está licenciado sob a Licença MIT License - veja o [LICENSE.md](https://github.com/LucasSantus/controle-visitantes/blob/master/LICENSE) para melhores detalhes.
+Este projeto está licenciado sob a Licença MIT License - veja o [LICENSE.md](https://github.com/LucasSantus/music/blob/master/LICENSE) para melhores detalhes.
