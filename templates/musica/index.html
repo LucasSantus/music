@@ -6,21 +6,36 @@
     <div class="col s12 m6 l10 center">
         <h3 class="text-theme truncate">Músicas</h3>
     </div>
-    <div class="container">
-        <form method="POST">
-            {% csrf_token %}
-            <div class="container">
+
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <div class="row">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix" type="submit">search</i>
+                        <input type="text" name="pesquisa" id="pesquisa">
+                        <label for="pesquisa">Pesquisar Música</label>
+                   </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div class="container center">
+            <div class="row">
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">search</i>
-                        <input type="text" name="pesquisa" id="pesquisa" class="col s10">
-                        <label for="autocomplete-input">Pesquisar Produto</label>
+                        
+                        <label for="pesquisa">Pesquisar Música</label>
                         <button class="waves-effect waves-light btn col s1 blue-grey darken-4" type="submit"><i class="material-icons">search</i></button>
                     </div>
                 </div>
-            </div>                    
-        </form>
-    </div>
+            </div>
+        </div>                     -->
+    </form>
+
 
     <div class="container">
         <div class="row">
@@ -39,7 +54,7 @@
                                     <p>{{music.compositor}}</p>
                                 </div>
                                 <div class="card-action">
-                                    <a href="{{music.link}}" target="_blank">LINK</a>
+                                    <a class= "deep-orange-text text-lighten-1" href="{{music.link}}" target="_blank">LINK</a>
                                 </div>
                             </div>
                         </div>
