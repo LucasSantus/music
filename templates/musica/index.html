@@ -4,65 +4,47 @@
 
 <main>
     <div class="col s12 m6 l10 center">
-        <h3 class="text-theme truncate">Músicas</h3>
+        <h3 class="text-theme truncate">Music</h3>
     </div>
-
 
     <form method="POST">
         {% csrf_token %}
         <div class="container">
-            <div class="row">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix" type="submit">search</i>
-                        <input type="text" name="pesquisa" id="pesquisa">
-                        <label for="pesquisa">Pesquisar Música</label>
-                   </div>
-                </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix" type="submit">search</i>
+                <input type="text" name="pesquisa" id="pesquisa">
+                <label for="pesquisa">Pesquisar Música</label>
             </div>
         </div>
-        
-        <!-- <div class="container center">
-            <div class="row">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">search</i>
-                        
-                        <label for="pesquisa">Pesquisar Música</label>
-                        <button class="waves-effect waves-light btn col s1 blue-grey darken-4" type="submit"><i class="material-icons">search</i></button>
-                    </div>
-                </div>
-            </div>
-        </div>                     -->
     </form>
 
+    {% if messages %}
+        <div class="container center">
+            <div class="col s6">
+                <div class="container">
+                    <div class="container">
+                        <div class="container">
+                            <div class="container">
+                                <div class="card red">
+                                    <ul class="messages white-text">
+                                        {% for message in messages %}
+                                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    {% endif %}
 
     <div class="container">
         <div class="row">
             <div class="col s12">
                 {% for music in list_musicas %}
                     <div class="col s3">
-                        <!-- <div class="card horizontal z-depth-4" style="height:200px;">
-                            <div class="card-image">
-                                <img src="{{music.imagem}}" width="200px" height="200px">
-                            </div>
-                            <div class="card-stacked container">
-                                <div class="card-content">
-                                    <p>{{music.nome|truncatechars:30}}</p>
-                                    <p>{{music.cantor}}</p>
-                                    <p>{{music.album}}</p>
-                                    <p>{{music.compositor}}</p>
-                                </div>
-
-                                <div class="card-reveal">
-                                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                                  </div>
-                                <div class="card-action">
-                                    <a class= "deep-orange-text text-lighten-1" href="{{music.link}}" target="_blank">LINK</a>
-                                </div>
-                            </div>
-                        </div> -->
                         <div class="card z-depth-4">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="{{music.imagem}}" width="200px" height="200px">
@@ -75,6 +57,7 @@
                             <div class="card-reveal">
                                 <span class="card-title deep-orange-text text-darken-4">Details<i class="material-icons right" style="color: #212121;">close</i></span>
                                 <ul>
+                                    <li class="divider grey"></li>
                                     <li><strong>Cantor:</strong> {{music.cantor}}</li>
                                     <li class="divider grey"></li>
                                     <li><strong>Albúm:</strong> {{music.album}}</li>
@@ -82,6 +65,7 @@
                                     <li><strong>Compositor:</strong> {{music.compositor}}</li>
                                     <li class="divider grey"></li>
                                     <li><strong>Lançamento:</strong> {{music.data_lancamento}}</li>
+                                    <li class="divider grey"></li>
                                 </ul>    
                             </div>
                           </div>
