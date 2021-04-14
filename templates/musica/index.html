@@ -41,8 +41,8 @@
         <div class="row">
             <div class="col s12">
                 {% for music in list_musicas %}
-                    <div class="col s6">
-                        <div class="card horizontal z-depth-4" style="height:200px;">
+                    <div class="col s3">
+                        <!-- <div class="card horizontal z-depth-4" style="height:200px;">
                             <div class="card-image">
                                 <img src="{{music.imagem}}" width="200px" height="200px">
                             </div>
@@ -50,14 +50,41 @@
                                 <div class="card-content">
                                     <p>{{music.nome|truncatechars:30}}</p>
                                     <p>{{music.cantor}}</p>
-                                    <p>{{music.album|truncatechars:33}}</p>
+                                    <p>{{music.album}}</p>
                                     <p>{{music.compositor}}</p>
                                 </div>
+
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                                  </div>
                                 <div class="card-action">
                                     <a class= "deep-orange-text text-lighten-1" href="{{music.link}}" target="_blank">LINK</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                        <div class="card z-depth-4">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="{{music.imagem}}" width="200px" height="200px">
+                            </div>
+                            
+                            <div class="card-content">
+                                <span style="font-size: 18px;" class="card-title activator grey-text text-darken-4">{{music.nome|truncatechars:18}}<i class="material-icons right">more_vert</i></span>
+                                <p><a class= "deep-orange-text text-lighten-1" href="{{music.link}}" target="_blank">LINK</a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title deep-orange-text text-darken-4">Details<i class="material-icons right" style="color: #212121;">close</i></span>
+                                <ul>
+                                    <li><strong>Cantor:</strong> {{music.cantor}}</li>
+                                    <li class="divider grey"></li>
+                                    <li><strong>Albúm:</strong> {{music.album}}</li>
+                                    <li class="divider grey"></li>
+                                    <li><strong>Compositor:</strong> {{music.compositor}}</li>
+                                    <li class="divider grey"></li>
+                                    <li><strong>Lançamento:</strong> {{music.data_lancamento}}</li>
+                                </ul>    
+                            </div>
+                          </div>
                     </div>
                 {% endfor %} 
             </div>
